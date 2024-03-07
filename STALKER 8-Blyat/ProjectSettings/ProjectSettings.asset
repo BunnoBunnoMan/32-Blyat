@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 3029a8ca0de8a414992896212907fb87
+  productGUID: 98a2cad4e276cd945bb151068a611969
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -704,10 +704,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 341fbb19-732e-457a-8ecc-e317ba32faf6
+  cloudProjectId: b0bd0804-6ac5-4a79-ade1-0210a6c47d43
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: STALKER 8-Blyat 2024-03-07_12-13-15
+  projectName: STALKER 8-Blyat 2024-03-07_13-01-48
   organizationId: bunnobunnoman
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
