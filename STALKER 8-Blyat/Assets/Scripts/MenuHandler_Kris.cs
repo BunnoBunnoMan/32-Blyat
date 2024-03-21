@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class MenuHandler_Kris : MonoBehaviour
 {
     public GameObject pauseScreen;
+    public GameObject quitScreen;
     public static bool paused = false;
     void Update()
     {
@@ -33,17 +34,26 @@ public class MenuHandler_Kris : MonoBehaviour
     {
         Time.timeScale = 1;
         pauseScreen.SetActive(false);
+        quitScreen.SetActive(false);
         paused = false;
     }
-    public void Start(string sceneName)
+    public void ToTitle(string sceneName)
     {
         //Debug.Log("Start");
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1;
     }
-
+    public void QuitQuery()
+    {
+        quitScreen.SetActive(true);
+    }
+    public void CancelQuery()
+    {
+        quitScreen.SetActive(false);
+    }
     public void Quit()
     {
         Application.Quit();
     }
+    
 }

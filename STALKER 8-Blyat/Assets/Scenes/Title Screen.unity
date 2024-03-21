@@ -641,7 +641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20cec826761b03948af94a920a25658e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
+  pauseScreen: {fileID: 0}
+  quitScreen: {fileID: 0}
 --- !u!1 &676836154
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,7 +954,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 576273556}
         m_TargetAssemblyTypeName: MenuHandler_Kris, Assembly-CSharp
-        m_MethodName: Start
+        m_MethodName: ToTitle
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
