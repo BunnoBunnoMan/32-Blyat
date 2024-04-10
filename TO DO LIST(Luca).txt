@@ -1,0 +1,8 @@
+Things i will be working on, 4/11/23
+
+-finish the bullet script
+
+-create a scriptable object for weapon 
+ stats
+
+-Create a test environment for "swapping" weapons
