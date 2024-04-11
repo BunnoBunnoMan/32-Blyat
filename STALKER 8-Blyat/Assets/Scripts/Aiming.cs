@@ -11,7 +11,7 @@ public class Aiming : MonoBehaviour
     public Transform bulleTransform;
     public bool canFire;
     private float timer;
-    public float timeBetweenfiring;
+    // public float timeBetweenfiring;
 
 
     // Start is called before the first frame update
@@ -34,7 +34,7 @@ public class Aiming : MonoBehaviour
         if (!canFire)
         {
             timer += Time.deltaTime;
-            if(timer > timeBetweenfiring)
+            if(timer > Gun1.fireRate)
             {
                 canFire = true;
                 timer = 0;

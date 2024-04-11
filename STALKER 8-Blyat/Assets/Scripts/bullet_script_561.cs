@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class bullet_script_561 : MonoBehaviour
+public class Bullet_script_561 : MonoBehaviour
 {
     private Vector3 mousePos;
     private Camera mainCam;
@@ -13,7 +13,7 @@ public class bullet_script_561 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        
+
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
