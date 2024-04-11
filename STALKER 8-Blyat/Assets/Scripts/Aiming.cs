@@ -24,8 +24,11 @@ public class Aiming : MonoBehaviour
     void Update()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
         Vector3 rotation = mousePos - transform.position;
+        
         float z = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg + 180;
+        
         transform.rotation = Quaternion.Euler(0, 0, z);
 
         if (!canFire)
@@ -38,10 +41,11 @@ public class Aiming : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(0) && canFire)
+        if (Input.GetMouseButton(0) && canFire && !MenuHandler_Kris.paused)
         {
             canFire = false;
             Instantiate(bullet, bulleTransform.position, quaternion.identity);
         }
+        
     }
 }

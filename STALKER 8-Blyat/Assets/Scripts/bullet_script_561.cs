@@ -12,7 +12,8 @@ public class bullet_script_561 : MonoBehaviour
     public float force;
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
