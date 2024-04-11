@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 139878624}
   - component: {fileID: 139878623}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Test Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -668,6 +668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Temp
       objectReference: {fileID: 0}
+    - target: {fileID: 4001802013972310171, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 1220590292398273059, guid: 2606657f0060d36489132c1ad0bd5760, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
