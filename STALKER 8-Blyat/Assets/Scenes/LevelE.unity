@@ -668,6 +668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Temp
       objectReference: {fileID: 0}
+    - target: {fileID: 3157588082478766019, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4001802013972310171, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
       propertyPath: bullet
       value: 
