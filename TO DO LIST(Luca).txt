@@ -1,8 +1,9 @@
-Things i will be working on, 11/4/24
+Things i will be working on, 4/11/24
 
--finish the bullet script
+-finish the bullet script[done]
 
--create a scriptable object for weapon 
+-create a scriptable object for weapon[UPDATE] 
  stats
+ //baked into the test enviroment task.
 
--Create a test environment for "swapping" weapons
+-Create a test environment for "swapping" weapons [HIGH PRIORITY]
