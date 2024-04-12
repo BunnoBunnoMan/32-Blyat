@@ -1,1 +1,4 @@
 https://youtube.com/playlist?list=PLF0WT5UD9LvxOaAhlI_6HUZK-l59_APQj&si=AbsNAWTeJ_dgtwfD
+
+Forum post on class interaction.
+https://forum.unity.com/threads/how-to-change-a-variable-from-another-script.701915/
