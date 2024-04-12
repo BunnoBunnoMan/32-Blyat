@@ -157,8 +157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPos: {fileID: 1124949689}
   movespeed: 1
-  seen: 0
   rb: {fileID: 139878627}
+  enemyPos: {fileID: 139878625}
+  waypoint: {fileID: 2452839755669024599, guid: 0338ff47f5cfc4d42a3f0259644eede0, type: 3}
 --- !u!212 &139878624
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -661,7 +662,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -778,7 +779,7 @@ GameObject:
   - component: {fileID: 1992148279}
   m_Layer: 0
   m_Name: Test Wall
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
