@@ -11,6 +11,10 @@ public class Detection : MonoBehaviour
     public Transform playerPos;
     void Update()
     {
+        Detect();
+    }
+    void Detect()
+    {
         direction = (playerPos.position - transform.position).normalized;
         RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, direction);
         Debug.DrawRay(transform.position, direction * 50);

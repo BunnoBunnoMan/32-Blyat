@@ -11,9 +11,11 @@ public class EnemyAi : MonoBehaviour
     public Rigidbody2D rb;
     private static System.Random rng = new System.Random();
     private Vector3 movegen;
+    private bool seen;
     private void FixedUpdate()
     {
-        if(seen)
+        seen = Detection
+        if()
         {
             Chase();
         }
