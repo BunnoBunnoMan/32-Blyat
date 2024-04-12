@@ -2,8 +2,7 @@ Things i will be working on, 4/11/24
 
 -finish the bullet script[done]
 
--create a scriptable object for weapon[UPDATE] 
- stats
+-create a scriptable object for weapon stats [UPDATE] 
  //baked into the test enviroment task.
 
 -Create a test environment for "swapping" weapons [HIGH PRIORITY]
