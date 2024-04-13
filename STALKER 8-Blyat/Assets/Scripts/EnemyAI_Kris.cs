@@ -12,13 +12,14 @@ public class EnemyAi : MonoBehaviour
     private static System.Random rng = new System.Random();
     private Vector3 movegen;
     private bool seen;
+    private bool seenWander;
     public Transform enemyPos;
     private bool wanderGened;
     public GameObject waypoint;
     private Vector2 movement;
     void Update()
     {
-        seen = Detection.Detect(playerPos, enemyPos);
+        seen = Detection.Detect(playerPos.position, enemyPos);
     }
     void FixedUpdate()
     {
@@ -32,7 +33,8 @@ public class EnemyAi : MonoBehaviour
         }
         else
         {
-            if(wanderGened == false)
+            
+            if(wanderGened == false || !seenWander)
             {
                 movegen = WanderGen();
                 Debug.Log($"{movegen.x}.{movegen.y}");
@@ -40,7 +42,8 @@ public class EnemyAi : MonoBehaviour
                 movespeed = 1;
                 wanderGened = true;
             }
-            if(Vector2.Distance(enemyPos.position, movegen) > 0.5)
+            seenWander = Detection.Detect(movegen, enemyPos);
+            if(Vector2.Distance(enemyPos.position, movegen) > 0.5 && seenWander)
             {
                 Debug.Log(Vector2.Distance(enemyPos.position, movegen));
                 movement = enemyPos.position - movegen;
