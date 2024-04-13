@@ -924,10 +924,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6811476610773821611, guid: 96fc72d5f8d363340a9fd16d40ffd668, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1211445079}
     - target: {fileID: 7014196650054742263, guid: 96fc72d5f8d363340a9fd16d40ffd668, type: 3}
       propertyPath: m_Name
       value: Whiteout

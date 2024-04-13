@@ -445,7 +445,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -575,6 +575,10 @@ PrefabInstance:
     - target: {fileID: 7014196650054742263, guid: 96fc72d5f8d363340a9fd16d40ffd668, type: 3}
       propertyPath: m_Name
       value: Whiteout
+      objectReference: {fileID: 0}
+    - target: {fileID: 7014196650054742263, guid: 96fc72d5f8d363340a9fd16d40ffd668, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
