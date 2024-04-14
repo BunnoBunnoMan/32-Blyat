@@ -17,12 +17,9 @@ public class EnemyAi : MonoBehaviour
     private bool wanderGened;
     public GameObject waypoint;
     private Vector2 movement;
-    void Update()
-    {
-        seen = Detection.Detect(playerPos.position, enemyPos);
-    }
     void FixedUpdate()
     {
+        seen = Detection.Detect(playerPos.position, enemyPos);
         if(seen)
         {
             wanderGened = false;
@@ -33,7 +30,6 @@ public class EnemyAi : MonoBehaviour
         }
         else
         {
-            
             if(wanderGened == false || !seenWander)
             {
                 movegen = WanderGen();

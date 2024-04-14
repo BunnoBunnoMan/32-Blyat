@@ -1005,6 +1005,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4001802013972310171, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 1220590292398273059, guid: 2606657f0060d36489132c1ad0bd5760, type: 3}
     - target: {fileID: 5661843803016568374, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
       propertyPath: m_Sprite
       value: 
