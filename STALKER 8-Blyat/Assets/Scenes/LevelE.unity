@@ -198,8 +198,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 881117641
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -821,22 +821,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Temp
       objectReference: {fileID: 0}
-    - target: {fileID: 3157588082478766019, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4001802013972310171, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 1220590292398273059, guid: 2606657f0060d36489132c1ad0bd5760, type: 3}
-    - target: {fileID: 6906941603706575255, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
-      propertyPath: m_Size.x
-      value: 0.83483464
-      objectReference: {fileID: 0}
-    - target: {fileID: 6906941603706575255, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.029459149
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -954,8 +938,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1639018643
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
@@ -1030,10 +1014,6 @@ PrefabInstance:
     - target: {fileID: 586550405833910272, guid: 4eed6758e7530ac438f0ee81119ae535, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5387543859761866803, guid: 4eed6758e7530ac438f0ee81119ae535, type: 3}
-      propertyPath: sceneName
-      value: LevelG
       objectReference: {fileID: 0}
     - target: {fileID: 7103562954990012666, guid: 4eed6758e7530ac438f0ee81119ae535, type: 3}
       propertyPath: m_Name

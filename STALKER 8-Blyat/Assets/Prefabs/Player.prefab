@@ -212,8 +212,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 881117641
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: be8b916ccfeb56a48a6ed5ce14c80313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -258,8 +258,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.029794514, y: 0.02545023}
-  m_Size: {x: 0.8386164, y: 1.3810835}
+  m_Offset: {x: -0.029459149, y: 0.02545023}
+  m_Size: {x: 0.83483464, y: 1.3810835}
   m_Direction: 0
 --- !u!1 &7511881745895957090
 GameObject:
@@ -306,6 +306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df96e46294f8c64c934656bca71dc3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 1220590292398273059, guid: 2606657f0060d36489132c1ad0bd5760, type: 3}
   bulleTransform: {fileID: 8024913969463476796}
   canFire: 1

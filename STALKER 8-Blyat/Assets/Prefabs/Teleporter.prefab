@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4873068627668960399}
   - component: {fileID: 3475046092974027117}
   - component: {fileID: 5387543859761866803}
+  - component: {fileID: 1170996103851886138}
   m_Layer: 0
   m_Name: Teleporter
   m_TagString: Untagged
@@ -143,4 +144,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9b3968737ccd146bbadc8164ec48c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: LevelG
+  menuHandler: {fileID: 1170996103851886138}
+--- !u!114 &1170996103851886138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7103562954990012666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20cec826761b03948af94a920a25658e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseScreen: {fileID: 0}
+  quitScreen: {fileID: 0}
