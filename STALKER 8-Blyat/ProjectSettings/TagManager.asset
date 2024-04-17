@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Walls
+  - Gun Anchor
   layers:
   - Default
   - TransparentFX
