@@ -22,11 +22,16 @@ public class Bullet_script_561 : MonoBehaviour
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    
+
+    // private void OnCollisionEnter2D(Collision2D collision){
         
-    }
+    //     GameObject effect = Instantiate(Explosion, transform.position, Quaternion.identity);
+    //     Destroy(effect, 5);
+    //     Destroy(gameObject);
+    // }
+    
 }
