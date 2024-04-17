@@ -1,6 +1,6 @@
-Things i will be working on, 4/11/24
+Things i will be working on,
 
--finish the bullet script[done]
+-finish the bullet script[done] 4/11/24
 
 -create a scriptable object for weapon stats [UPDATE] 
  //baked into the test enviroment task.
