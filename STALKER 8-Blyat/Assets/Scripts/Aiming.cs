@@ -11,13 +11,10 @@ public class Aiming : MonoBehaviour
     public Transform bulletTransform;
     public bool canFire;
     private float timer;
-<<<<<<< Updated upstream
+
     public float timeBetweenfiring;
     
-=======
     AudioSource m_pew;
-    // public float timeBetweenfiring;
->>>>>>> Stashed changes
 
 
     // Start is called before the first frame update
