@@ -17,9 +17,11 @@ public class ChargerAi : MonoBehaviour
     private bool wanderGened;
     public GameObject waypoint;
     private Vector2 movement;
+    private float distance;
     void FixedUpdate()
     {
-        seen = Detection.Detect(playerPos.position, enemyPos);
+        distance = 20;
+        seen = Detection.Detect(playerPos.position, enemyPos, distance);
         if(seen)
         {
             wanderGened = false;
@@ -36,7 +38,8 @@ public class ChargerAi : MonoBehaviour
                 Instantiate(waypoint, movegen, Quaternion.identity);
                 wanderGened = true;
             }
-            seenWander = Detection.Detect(movegen, enemyPos);
+            distance = 0.25F;
+            seenWander = Detection.Detect(movegen, enemyPos, distance);
             if(Vector2.Distance(enemyPos.position, movegen) > 0.5 && seenWander)
             {
                 //Debug.Log(Vector2.Distance(enemyPos.position, movegen));

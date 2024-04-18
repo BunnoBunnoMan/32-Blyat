@@ -17,16 +17,21 @@ public class BullAi : MonoBehaviour
     private bool wanderGened;
     public GameObject waypoint;
     private Vector2 movement;
+    private float distance;
     void FixedUpdate()
     {
-        seen = Detection.Detect(playerPos.position, enemyPos);
+        distance = 20;
+        seen = Detection.Detect(playerPos.position, enemyPos, distance);
+        Debug.Log(seen);
         if(seen)
         {
             wanderGened = false;
             movement = transform.position - playerPos.position;
             movement = Vector2.ClampMagnitude(movement, 1);
-            /*rb.MovePosition(rb.position - movespeed * Time.fixedDeltaTime * movement);*/
-            rb.AddForce(movement);
+            Vector3 direction = (playerPos.position - enemyPos.position).normalized;
+            //rb.MovePosition(rb.position - movespeed * Time.fixedDeltaTime * movement);
+            Debug.Log($"{(playerPos.position - enemyPos.position).normalized}");
+            rb.AddForce(direction );
         }
         else
         {
@@ -37,13 +42,14 @@ public class BullAi : MonoBehaviour
                 Instantiate(waypoint, movegen, Quaternion.identity);
                 wanderGened = true;
             }
-            seenWander = Detection.Detect(movegen, enemyPos);
+            distance = 1.5F;
+            seenWander = Detection.Detect(movegen, enemyPos, distance);
             if(Vector2.Distance(enemyPos.position, movegen) > 0.5 && seenWander)
             {
                 //Debug.Log(Vector2.Distance(enemyPos.position, movegen));
                 movement = enemyPos.position - movegen;
                 movement = Vector2.ClampMagnitude(movement, 1);
-                rb.MovePosition(rb.position - 1 * movement * Time.fixedDeltaTime);
+                rb.MovePosition(rb.position - 0.5F * movement * Time.fixedDeltaTime);
             }
             else if(Vector2.Distance(enemyPos.position, movegen) < 0.5) wanderGened = false;
         }
@@ -55,5 +61,9 @@ public class BullAi : MonoBehaviour
         movegen.x = transform.position.x + xMax;
         movegen.y = transform.position.y + yMax;
         return movegen;
+    }
+    void OnCollisionEnter2D(Collision2D collider)
+    {
+        rb.velocity = Vector2.zero;
     }
 }

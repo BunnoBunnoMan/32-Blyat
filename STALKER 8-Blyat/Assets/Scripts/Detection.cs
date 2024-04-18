@@ -10,17 +10,17 @@ public class Detection : MonoBehaviour
     private Ray ray;
     private Vector2 direction;
     public Transform playerPos;
-    public static bool Detect(Vector3 playerPos, Transform enemyPos)
+    public static bool Detect(Vector3 playerPos, Transform enemyPos, float distance)
     {
         Vector2 direction = (playerPos - enemyPos.position).normalized;
-        RaycastHit2D[] hits = Physics2D.RaycastAll(enemyPos.position, direction, 5);
-        Debug.DrawRay(enemyPos.position, direction * 50);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(enemyPos.position, direction, distance);
+        Debug.DrawRay(enemyPos.position, direction * distance);
         string[] hitList = new string[hits.Length];
         for (int i = 0; i < hits.Length; i++)
         {
             hitList[i] = hits[i].collider.tag;
         }
-        if (!hitList.Contains("Walls")) return true;
+        if (!hitList.Contains("Cover")) return true;
         else return false;
     }
 }
