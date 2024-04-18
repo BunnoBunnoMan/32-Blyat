@@ -307,5 +307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1220590292398273059, guid: 2606657f0060d36489132c1ad0bd5760, type: 3}
-  bulleTransform: {fileID: 8024913969463476796}
+  bulletTransform: {fileID: 0}
   canFire: 1
+  timeBetweenfiring: 0.7

@@ -26,12 +26,9 @@ public class Bullet_script_561 : MonoBehaviour
     }
 
     
-
-    // private void OnCollisionEnter2D(Collision2D collision){
-        
-    //     GameObject effect = Instantiate(Explosion, transform.position, Quaternion.identity);
-    //     Destroy(effect, 5);
-    //     Destroy(gameObject);
-    // }
+    //the following script deletes the bullet on collision
+    private void OnCollisionEnter2D(Collision2D collision){ 
+        Destroy(GameObject.FindGameObjectWithTag("Bullet"));
+    }
     
 }

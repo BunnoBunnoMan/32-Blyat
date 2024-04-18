@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Walls
   - Gun Anchor
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -8,10 +8,11 @@ public class Aiming : MonoBehaviour
     private Camera cam;
     private Vector3 mousePos;
     public GameObject bullet;
-    public Transform bulleTransform;
+    public Transform bulletTransform;
     public bool canFire;
     private float timer;
-    // public float timeBetweenfiring;
+    public float timeBetweenfiring;
+    
 
 
     // Start is called before the first frame update
@@ -34,7 +35,7 @@ public class Aiming : MonoBehaviour
         if (!canFire)
         {
             timer += Time.deltaTime;
-            if(timer > Gun1.fireRate)
+            if(timer > timeBetweenfiring)
             {
                 canFire = true;
                 timer = 0;
@@ -44,7 +45,7 @@ public class Aiming : MonoBehaviour
         if (Input.GetMouseButton(0) && canFire && !MenuHandler_Kris.paused)
         {
             canFire = false;
-            Instantiate(bullet, bulleTransform.position, quaternion.identity);
+            Instantiate(bullet, bulletTransform.position, quaternion.identity);
         }
         
     }

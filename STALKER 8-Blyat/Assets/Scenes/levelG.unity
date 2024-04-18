@@ -1070,6 +1070,10 @@ PrefabInstance:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 1220590292398273059, guid: 2606657f0060d36489132c1ad0bd5760, type: 3}
+    - target: {fileID: 4001802013972310171, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
+      propertyPath: bulletTransform
+      value: 
+      objectReference: {fileID: 5704663788404800345}
     - target: {fileID: 5661843803016568374, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1107,6 +1111,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
+--- !u!4 &5704663788404800345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8024913969463476796, guid: 7bf247fefc9d5cb4386e01727b875c7f, type: 3}
+  m_PrefabInstance: {fileID: 5704663788404800344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
