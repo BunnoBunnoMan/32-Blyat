@@ -13,7 +13,7 @@ public class Detection : MonoBehaviour
     public static bool Detect(Vector3 playerPos, Transform enemyPos)
     {
         Vector2 direction = (playerPos - enemyPos.position).normalized;
-        RaycastHit2D[] hits = Physics2D.RaycastAll(enemyPos.position, direction);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(enemyPos.position, direction, 5);
         Debug.DrawRay(enemyPos.position, direction * 50);
         string[] hitList = new string[hits.Length];
         for (int i = 0; i < hits.Length; i++)
