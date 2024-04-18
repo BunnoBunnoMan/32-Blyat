@@ -25,10 +25,9 @@ public class Bullet_script_561 : MonoBehaviour
 
     }
 
-    
-    //the following script deletes the bullet on collision
+
     private void OnCollisionEnter2D(Collision2D collision){ 
-        Destroy(GameObject.FindGameObjectWithTag("Bullet"));
+        Destroy(gameObject, 0.1f);
     }
     
 }
