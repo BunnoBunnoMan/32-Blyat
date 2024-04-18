@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 public class EnemyAi : MonoBehaviour
 {
     public Transform playerPos;
-    public int movespeed;
+    public float movespeed;
     public Rigidbody2D rb;
     private static System.Random rng = new System.Random();
     private Vector3 movegen;
@@ -22,11 +22,7 @@ public class EnemyAi : MonoBehaviour
         seen = Detection.Detect(playerPos.position, enemyPos);
         if(seen)
         {
-            wanderGened = false;
-            movespeed = 3;
-            movement = transform.position - playerPos.position;
-            movement = Vector2.ClampMagnitude(movement, 1);
-            rb.MovePosition(rb.position - movespeed * Time.fixedDeltaTime * movement);
+            wanderGened = Charge();
         }
         else
         {
@@ -35,7 +31,6 @@ public class EnemyAi : MonoBehaviour
                 movegen = WanderGen();
                 Debug.Log($"{movegen.x}.{movegen.y}");
                 Instantiate(waypoint, movegen, Quaternion.identity);
-                movespeed = 1;
                 wanderGened = true;
             }
             seenWander = Detection.Detect(movegen, enemyPos);
@@ -44,7 +39,7 @@ public class EnemyAi : MonoBehaviour
                 Debug.Log(Vector2.Distance(enemyPos.position, movegen));
                 movement = enemyPos.position - movegen;
                 movement = Vector2.ClampMagnitude(movement, 1);
-                rb.MovePosition(rb.position - movespeed * movement * Time.fixedDeltaTime);
+                rb.MovePosition(rb.position - 1 * movement * Time.fixedDeltaTime);
             }
             else if(Vector2.Distance(enemyPos.position, movegen) < 0.5) wanderGened = false;
 
@@ -57,5 +52,20 @@ public class EnemyAi : MonoBehaviour
         movegen.x = transform.position.x + xMax;
         movegen.y = transform.position.y + yMax;
         return movegen;
+    }
+    private bool Chase()
+    {
+        movement = transform.position - playerPos.position;
+        movement = Vector2.ClampMagnitude(movement, 1);
+        rb.MovePosition(rb.position - movespeed * Time.fixedDeltaTime * movement);
+        return false;
+    }
+    private bool Charge()
+    {
+        /*movement = transform.position - playerPos.position;
+        movement = Vector2.ClampMagnitude(movement, 1);
+        rb.MovePosition(rb.position -movespeed * Time.fixedDeltaTime * movement);*/
+        //rb.AddForce();
+        return false;
     }
 }
