@@ -11,14 +11,20 @@ public class Aiming : MonoBehaviour
     public Transform bulletTransform;
     public bool canFire;
     private float timer;
+<<<<<<< Updated upstream
     public float timeBetweenfiring;
     
+=======
+    AudioSource m_pew;
+    // public float timeBetweenfiring;
+>>>>>>> Stashed changes
 
 
     // Start is called before the first frame update
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        m_pew = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,6 +50,7 @@ public class Aiming : MonoBehaviour
 
         if (Input.GetMouseButton(0) && canFire && !MenuHandler_Kris.paused)
         {
+            m_pew.Play();
             canFire = false;
             Instantiate(bullet, bulletTransform.position, quaternion.identity);
         }
