@@ -6,8 +6,11 @@ public class LevelHandler : MonoBehaviour
 {
     public string sceneName;
     public MenuHandler_Kris menuHandler;
-    public void OnTriggerEnter2D()
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        menuHandler.ToTitle(sceneName);
+        if(collision.gameObject.name == "Player")
+        {
+            menuHandler.ToTitle(sceneName);
+        }
     }
 }
