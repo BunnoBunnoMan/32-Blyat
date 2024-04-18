@@ -12,16 +12,13 @@ public class Aiming : MonoBehaviour
     public bool canFire;
     private float timer;
 
-    public float timeBetweenfiring;
-    
-    public AudioSource m_pew;
-
+    public GunStats Stats;
+    public float TimeBetweenFiring;
 
     // Start is called before the first frame update
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        m_pew = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,7 +35,7 @@ public class Aiming : MonoBehaviour
         if (!canFire)
         {
             timer += Time.deltaTime;
-            if(timer > timeBetweenfiring)
+            if(timer > Stats.FireRate) // figure out a way to change the time between firing
             {
                 canFire = true;
                 timer = 0;
@@ -49,7 +46,6 @@ public class Aiming : MonoBehaviour
         {   
         
             canFire = false;
-            m_pew.Play();
             Instantiate(bullet, bulletTransform.position, quaternion.identity);
         }
         

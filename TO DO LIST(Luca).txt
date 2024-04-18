@@ -1,13 +1,12 @@
 Things i will be working on,
 
--finish the bullet script[done] 4/11/24
+-finish the bullet script[DONE] 4/11/24
 
--create a scriptable object for weapon stats [UPDATE] 
+-create a scriptable object for weapon stats [DONE] 
  //baked into the test enviroment task.
 
--Create a test environment for "swapping" weapons [HIGH PRIORITY]
- //Check to see if variables can be changed externally as long as they're public.
- //Figure out if the public class problem is just a skill issue or not.
- //Last resort: Make three seperate gun objects and figure out a way to toggle between them (very lame).
+-Create a test environment for "swapping" weapons [DONE]
+ 
+-Create and implement a Health/damage system
 
- //idea from Chris: see what the GameObject.FindGameObjectWithTag(); Function
+ 
