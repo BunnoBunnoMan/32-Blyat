@@ -14,7 +14,7 @@ public class Aiming : MonoBehaviour
 
     public float timeBetweenfiring;
     
-    AudioSource m_pew;
+    public AudioSource m_pew;
 
 
     // Start is called before the first frame update
@@ -46,9 +46,10 @@ public class Aiming : MonoBehaviour
         }
 
         if (Input.GetMouseButton(0) && canFire && !MenuHandler_Kris.paused)
-        {
-            m_pew.Play();
+        {   
+        
             canFire = false;
+            m_pew.Play();
             Instantiate(bullet, bulletTransform.position, quaternion.identity);
         }
         
