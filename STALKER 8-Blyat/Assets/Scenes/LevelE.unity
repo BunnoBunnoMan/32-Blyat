@@ -1576,7 +1576,7 @@ GameObject:
   - component: {fileID: 1992148279}
   m_Layer: 0
   m_Name: Test Wall
-  m_TagString: Walls
+  m_TagString: Cover
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
