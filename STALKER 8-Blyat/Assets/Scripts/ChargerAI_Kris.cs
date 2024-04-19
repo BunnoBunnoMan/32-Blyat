@@ -21,7 +21,7 @@ public class ChargerAi : MonoBehaviour
     void FixedUpdate()
     {
         distance = 20;
-        seen = Detection.Detect(playerPos.position, enemyPos, distance);
+        //seen = Detection.Detect(playerPos.position, enemyPos, distance); Uncomment upon completion of FOV. Do so on BullAI too
         if(seen)
         {
             wanderGened = false;
@@ -39,7 +39,7 @@ public class ChargerAi : MonoBehaviour
                 wanderGened = true;
             }
             distance = 0.25F;
-            seenWander = Detection.Detect(movegen, enemyPos, distance);
+            //seenWander = Detection.Detect(movegen, enemyPos, distance); Uncomment upon completion of FOV. Do so on BullAI too
             if(Vector2.Distance(enemyPos.position, movegen) > 0.5 && seenWander)
             {
                 //Debug.Log(Vector2.Distance(enemyPos.position, movegen));
