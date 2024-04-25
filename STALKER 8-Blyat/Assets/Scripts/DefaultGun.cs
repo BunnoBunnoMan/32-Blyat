@@ -9,6 +9,9 @@ public class DefaultGun : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("defaultGunBox");
-        Stats.FireRate = 0.7f;
+        Stats.FireRate = 0.8f;
+        Stats.MagazineSize = 2f;
+        Stats.ReloadSpeed = 3f;
+        Stats.ShotsFired = 0f;
     }
 }

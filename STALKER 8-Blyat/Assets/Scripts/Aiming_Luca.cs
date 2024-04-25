@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class Aiming : MonoBehaviour
@@ -11,13 +12,13 @@ public class Aiming : MonoBehaviour
     public Transform bulletTransform;
     public bool canFire;
     private float timer;
-
     public GunStats Stats;
-    public float TimeBetweenFiring;
+    public bool loaded;
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -35,19 +36,38 @@ public class Aiming : MonoBehaviour
         if (!canFire)
         {
             timer += Time.deltaTime;
-            if(timer > Stats.FireRate) // figure out a way to change the time between firing
+            if(timer > Stats.FireRate)
             {
                 canFire = true;
+
                 timer = 0;
+            }
+
+        }
+        if (!loaded)
+        {
+            Debug.Log("reloading...");
+            timer += Time.deltaTime;
+            if (timer > Stats.ReloadSpeed)
+            {
+                Stats.ShotsFired = 0;
+                loaded = true;
+                timer = 0;
+                Debug.Log("done");
             }
         }
 
-        if (Input.GetMouseButton(0) && canFire && !MenuHandler_Kris.paused)
+        if (Input.GetMouseButton(0) && canFire && !MenuHandler_Kris.paused && loaded)
         {   
-        
+            Stats.ShotsFired ++;
             canFire = false;
             Instantiate(bullet, bulletTransform.position, quaternion.identity);
         }
+
+        if (Stats.ShotsFired >= Stats.MagazineSize){
+            loaded = false;
+        }
+
         
     }
 }

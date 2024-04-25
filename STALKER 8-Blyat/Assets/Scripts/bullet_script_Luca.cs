@@ -10,6 +10,9 @@ public class Bullet_script_561 : MonoBehaviour
     private Camera mainCam;
     private Rigidbody2D rb;
     public float force;
+
+    private static System.Timers.Timer timer;
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -24,7 +27,6 @@ public class Bullet_script_561 : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);
         
     }
-
 
 
     public void OnCollisionEnter2D(Collision2D collision){ 

@@ -10,5 +10,8 @@ public class FastestGun : MonoBehaviour
     {
         Debug.Log("defaultGunBox");
         Stats.FireRate = 0.1f;
+        Stats.MagazineSize = 30f;
+        Stats.ReloadSpeed = 1.5f;
+        Stats.ShotsFired = 0f;
     }
 }
