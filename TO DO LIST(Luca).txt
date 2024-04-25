@@ -6,10 +6,10 @@ Things i will be working on,
 
 -Create a test environment for "swapping" weapons [DONE] 18/4/24
 
-- Add "magazine size" and a "reloading" system
- //A simple incremental loop that references a "magazine size" variable in the gun stats SO? 
- //"Reload speed" will probably have to be added too.
-   /Review how the "fireRate" timer works and see if something similair can be done for reloading.
+- Learn about/implemented a system for adding and changing animations [DONE!!!]
+
+- Add "magazine size" and a "reloading" system [Done]
+
  
 -Create and implement a player Health/damage system
  //Damage should be a part of the GunStats SO.
