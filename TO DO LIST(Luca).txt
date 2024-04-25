@@ -1,12 +1,12 @@
 Things i will be working on,
 
--finish the bullet script[DONE] 11/4/24
+-finish the bullet script[DONE] 11/04/24
 
--create a scriptable object for weapon stats [DONE] 18/4/24
+-create a scriptable object for weapon stats [DONE] 18/04/24
 
--Create a test environment for "swapping" weapons [DONE] 18/4/24
+-Create a test environment for "swapping" weapons [DONE] 18/04/24
 
-- Learn about/implemented a system for adding and changing animations [DONE!!!]
+- Learn about/implemented a system for adding and changing animations [DONE!!!] 25/04/24
 
 - Add "magazine size" and a "reloading" system [Done]
 
