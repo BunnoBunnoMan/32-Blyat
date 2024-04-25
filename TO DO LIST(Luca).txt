@@ -6,7 +6,17 @@ Things i will be working on,
  //baked into the test enviroment task.
 
 -Create a test environment for "swapping" weapons [DONE]
+
+- Add "magazine size"
+ //A simple incremental loop that references a "magazine size" 
+   variable in the gun stats SO?. "Reload speed" will probably have to be added too.
+   Review how the "fireRate" statment works and see if something similair can be done for 
+   reloading.
  
 -Create and implement a Health/damage system
+ //Damage should be a part of the GunStats SO.
+ //Health (+ move speed?) should be stored in a seperate SO (PlayerStats)?
+ //Could everything just be stored in the playerStats SO??
+ //Regardless of that enemy stats should definetly be their own SO... 
 
  
