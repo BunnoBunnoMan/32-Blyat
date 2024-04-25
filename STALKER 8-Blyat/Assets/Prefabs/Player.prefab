@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8024913969463476796}
   - component: {fileID: 8260319600413043913}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bulletTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1158151498117116948}
   - component: {fileID: 5661843803016568374}
   - component: {fileID: 6906941603706575255}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3157588082478766019}
   - component: {fileID: 4001802013972310171}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gun Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,4 +309,5 @@ MonoBehaviour:
   bullet: {fileID: 1220590292398273059, guid: 2606657f0060d36489132c1ad0bd5760, type: 3}
   bulletTransform: {fileID: 8024913969463476796}
   canFire: 1
+  Stats: {fileID: 0}
   TimeBetweenFiring: 0.7
