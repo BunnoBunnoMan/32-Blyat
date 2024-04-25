@@ -1,22 +1,30 @@
 Things i will be working on,
 
--finish the bullet script[DONE] 4/11/24
+-finish the bullet script[DONE] 11/4/24
 
--create a scriptable object for weapon stats [DONE] 
- //baked into the test enviroment task.
+-create a scriptable object for weapon stats [DONE] 18/4/24
 
--Create a test environment for "swapping" weapons [DONE]
+-Create a test environment for "swapping" weapons [DONE] 18/4/24
 
-- Add "magazine size"
- //A simple incremental loop that references a "magazine size" 
-   variable in the gun stats SO?. "Reload speed" will probably have to be added too.
-   Review how the "fireRate" statment works and see if something similair can be done for 
-   reloading.
+- Add "magazine size" and a "reloading" system
+ //A simple incremental loop that references a "magazine size" variable in the gun stats SO? 
+ //"Reload speed" will probably have to be added too.
+   /Review how the "fireRate" timer works and see if something similair can be done for reloading.
  
--Create and implement a Health/damage system
+-Create and implement a player Health/damage system
  //Damage should be a part of the GunStats SO.
- //Health (+ move speed?) should be stored in a seperate SO (PlayerStats)?
- //Could everything just be stored in the playerStats SO??
- //Regardless of that enemy stats should definetly be their own SO... 
+ //Should health and move speed be stored in it's own SO (PlayerStats)?
+ //Could everything just be stored in the playerStats SO?
+
+-Implement the health system for enemies
+ //Each enemy should have their own SO with all their stats.
+   /This will most likely require studying and altering Kris' Code.
+   /Alternatively just stick to only the health being SO'd since each enemy already has individual scripts.
+
+-Think about making a dodge mechanic :D
+ *I think it would be cool
+
+-Decide wether to start making levels or sprites first...
+ //Study up on 2D level design and tileset creation
 
  
