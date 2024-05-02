@@ -12,19 +12,20 @@ Things i will be working on,
 
  
 -Create and implement a player Health/damage system
- //Damage should be a part of the GunStats SO.
- //Should health and move speed be stored in it's own SO (PlayerStats)?
- //Could everything just be stored in the playerStats SO?
+ //Damage dealt should be a part of the GunStats SO.
+ // look in to the following:
+    /Should health and move speed be stored in it's own SO (PlayerStats)?
+    /Could everything above just be stored in the playerStats SO?
 
 -Implement the health system for enemies
- //Each enemy should have their own SO with all their stats.
+ //Each enemy type should have their own SO with all their stats.
    /This will most likely require studying and altering Kris' Code.
-   /Alternatively just stick to only the health being SO'd since each enemy already has individual scripts.
+   /Stick to only the health being SO'd for now since each enemy already has individual scripts.
 
 -Think about making a dodge mechanic :D
  *I think it would be cool
 
 -Decide wether to start making levels or sprites first...
- //Study up on 2D level design and tileset creation
+ //Study up on 2D top-down level design and tileset creation
 
  
