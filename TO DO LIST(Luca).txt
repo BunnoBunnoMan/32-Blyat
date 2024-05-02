@@ -11,13 +11,10 @@ Things i will be working on,
 - Add "magazine size" and a "reloading" system [Done]
 
  
--Create and implement a player Health/damage system
- //Damage dealt should be a part of the GunStats SO.
- // look in to the following:
-    /Should health and move speed be stored in it's own SO (PlayerStats)?
-    /Could everything above just be stored in the playerStats SO?
-
--Implement the health system for enemies
+-Create and implement a player Health/damage system [Done/waiting]
+ //Damage dealt by player should be a part of the GunStats SO.
+ 
+-Implement the health system for enemies [Waiting]
  //Each enemy type should have their own SO with all their stats.
    /This will most likely require studying and altering Kris' Code.
    /Stick to only the health being SO'd for now since each enemy already has individual scripts.
@@ -25,7 +22,8 @@ Things i will be working on,
 -Think about making a dodge mechanic :D
  *I think it would be cool
 
--Decide wether to start making levels or sprites first...
- //Study up on 2D top-down level design and tileset creation
+-start making levels
+ //greybox-->sprites-->animations
+
 
  
