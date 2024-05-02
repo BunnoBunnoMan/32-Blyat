@@ -46,14 +46,14 @@ public class Aiming : MonoBehaviour
         }
         if (!loaded)
         {
-            Debug.Log("reloading...");
+            // Debug.Log("reloading...");
             timer += Time.deltaTime;
             if (timer > Stats.ReloadSpeed)
             {
                 Stats.ShotsFired = 0;
                 loaded = true;
                 timer = 0;
-                Debug.Log("done");
+                // Debug.Log("done");
             }
         }
 
