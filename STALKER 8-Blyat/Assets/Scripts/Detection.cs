@@ -7,6 +7,7 @@ using UnityEngine.Rendering;
 using JetBrains.Annotations;
 using Unity.VisualScripting;
 using Unity.Mathematics;
+using UnityEngine.UIElements;
 
 public class Detection : MonoBehaviour
 {
@@ -18,8 +19,9 @@ public class Detection : MonoBehaviour
     public float viewDistance;
     public LayerMask layerMask;
     private Mesh mesh;
-    public MeshCollider collision;
     public GameObject fovHolder;
+    //public static float rayAngle;
+    //public static float rayAngle;
     /*public static bool Detect(Vector3 playerPos, Transform enemyPos, float distance)
     {
         Vector2 direction = (playerPos - enemyPos.position).normalized;
@@ -36,9 +38,9 @@ public class Detection : MonoBehaviour
     }*/
     void Start()
     {
+        
         mesh = new Mesh();
         fovHolder.GetComponent<MeshFilter>().mesh = mesh;
-        fovHolder.GetComponent<MeshCollider>().sharedMesh = mesh;
         
     }
     void Update()
@@ -46,6 +48,7 @@ public class Detection : MonoBehaviour
         float rayAngle = holderPosition.eulerAngles.z;
         float angleIncrease = fov / levelOfDetail;
         Vector3[] vertices = new Vector3[levelOfDetail + 2];
+        Vector2[] points = new Vector2[vertices.Length];
         int[] triangles = new int[levelOfDetail * 3];
         vertices[0] = Vector3.zero;
 
@@ -67,6 +70,7 @@ public class Detection : MonoBehaviour
                 //Debug.Log(vertex);
             }
             vertices[vertexIndex] = vertex;
+            points[vertexIndex] = vertex;
             if(i > 0)
             {
                 triangles[triangleIndex] = 0;
@@ -80,15 +84,18 @@ public class Detection : MonoBehaviour
 
         mesh.vertices = vertices;
         mesh.triangles = triangles;
+        fovHolder.GetComponent<PolygonCollider2D>().points = points;
+        
     }
-    public Vector3 VectorFromAngle(float angle)
+    public static Vector3 VectorFromAngle(float angle)
     {
         float angleRad = angle * Mathf.Deg2Rad;//(Mathf.PI /180f);
         return new Vector3(Mathf.Cos(angleRad),Mathf.Sin(angleRad));
     }
 
-    public void OnTriggerEnter2D(Collider2D collision2)
+    public void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(collision2.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
+        if(collision.gameObject.name == "Player") ChargerAi.seen = true;
     }
 }

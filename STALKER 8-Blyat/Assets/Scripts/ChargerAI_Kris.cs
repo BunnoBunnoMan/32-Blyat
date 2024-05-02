@@ -11,33 +11,37 @@ public class ChargerAi : MonoBehaviour
     public Rigidbody2D rb;
     private static System.Random rng = new System.Random();
     private Vector3 movegen;
-    private bool seen;
     private bool seenWander;
     public Transform enemyPos;
     private bool wanderGened;
     public GameObject waypoint;
     private Vector2 movement;
     private float distance;
+    public static bool seen;
+    public Transform fovRotation;
     void FixedUpdate()
     {
         distance = 20;
-        //seen = Detection.Detect(playerPos.position, enemyPos, distance); Uncomment upon completion of FOV. Do so on BullAI too
         if(seen)
         {
             wanderGened = false;
             movement = transform.position - playerPos.position;
             movement = Vector2.ClampMagnitude(movement, 1);
-            rb.MovePosition(rb.position - movespeed * Time.fixedDeltaTime * movement);
+            //rb.MovePosition(rb.position - movespeed * Time.fixedDeltaTime * movement);
+            Vector2 target = (playerPos.position - transform.position).normalized;
+            Debug.Log(Vector2.Angle(Vector2.down, target));
+            float dir = Vector2.Angle(Vector2.down, target);
+            
         }
         else
         {
-            if(wanderGened == false || !seenWander)
+            /*if(wanderGened == false || !seenWander)
             {
                 movegen = WanderGen();
                 //Debug.Log($"{movegen.x}.{movegen.y}");
                 Instantiate(waypoint, movegen, Quaternion.identity);
                 wanderGened = true;
-            }
+            }*/
             distance = 0.25F;
             //seenWander = Detection.Detect(movegen, enemyPos, distance); Uncomment upon completion of FOV. Do so on BullAI too
             if(Vector2.Distance(enemyPos.position, movegen) > 0.5 && seenWander)
@@ -49,6 +53,7 @@ public class ChargerAi : MonoBehaviour
             }
             else if(Vector2.Distance(enemyPos.position, movegen) < 0.5) wanderGened = false;
         }
+        seen = false;
     }
     private Vector3 WanderGen()
     {
