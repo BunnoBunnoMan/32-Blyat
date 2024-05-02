@@ -87,7 +87,7 @@ public class Detection : MonoBehaviour
         return new Vector3(Mathf.Cos(angleRad),Mathf.Sin(angleRad));
     }
 
-    void OnTriggerEnter2D(Collider2D collision2)
+    public void OnTriggerEnter2D(Collider2D collision2)
     {
         Debug.Log(collision2.gameObject.name);
     }

@@ -31,6 +31,7 @@ public class Bullet_script_561 : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision){ 
         Destroy(gameObject, 0.05f);
+        
     }
     
 }
