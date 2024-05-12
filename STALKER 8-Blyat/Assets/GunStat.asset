@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80592857162258e4793b1fcac28db5b9, type: 3}
   m_Name: GunStat
   m_EditorClassIdentifier: 
-  FireRate: 0.1
-  MagazineSize: 30
+  FireRate: 0.8
+  MagazineSize: 2
   ShotsFired: 0
-  ReloadSpeed: 1.5
+  ReloadSpeed: 3
