@@ -21,17 +21,22 @@ public class ChargerAi : MonoBehaviour
     public Transform fovRotation;
     void FixedUpdate()
     {
+        
         distance = 20;
         if(seen)
         {
             wanderGened = false;
             movement = transform.position - playerPos.position;
             movement = Vector2.ClampMagnitude(movement, 1);
-            //rb.MovePosition(rb.position - movespeed * Time.fixedDeltaTime * movement);
-            Vector2 target = (playerPos.position - transform.position).normalized;
-            Debug.Log(Vector2.Angle(Vector2.down, target));
-            float dir = Vector2.Angle(Vector2.down, target);
-            
+            rb.MovePosition(rb.position - movespeed * Time.fixedDeltaTime * movement);
+            /*Vector2 target = (playerPos.position - transform.position).normalized;
+            Debug.DrawRay(enemyPos.position, target * distance);
+            dir = Vector2.Angle(fovRotation.transform., target) - 45;
+            Debug.Log(dir);
+            fovRotation.rotation = Quaternion.Euler(0,0,dir);*/
+            fovRotation.right = playerPos.position - transform.position;
+            Debug.Log(fovRotation.right = playerPos.position - transform.position);
+
         }
         else
         {

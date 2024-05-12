@@ -13,13 +13,13 @@ public class Detection : MonoBehaviour
 {
     public bool seen;
     public Transform position;
-    public Transform holderPosition;
+    public Transform fovRotation;
     public float fov;
     public int levelOfDetail;
     public float viewDistance;
     public LayerMask layerMask;
     private Mesh mesh;
-    public GameObject fovHolder;
+    public GameObject fovPhysics;
     //public static float rayAngle;
     //public static float rayAngle;
     /*public static bool Detect(Vector3 playerPos, Transform enemyPos, float distance)
@@ -40,12 +40,13 @@ public class Detection : MonoBehaviour
     {
         
         mesh = new Mesh();
-        fovHolder.GetComponent<MeshFilter>().mesh = mesh;
+        fovPhysics.GetComponent<MeshFilter>().mesh = mesh;
         
     }
     void Update()
     {
-        float rayAngle = holderPosition.eulerAngles.z;
+        float rayAngle = fovRotation.eulerAngles.z +45;
+        //Debug.Log(rayAngle);
         float angleIncrease = fov / levelOfDetail;
         Vector3[] vertices = new Vector3[levelOfDetail + 2];
         Vector2[] points = new Vector2[vertices.Length];
@@ -84,7 +85,7 @@ public class Detection : MonoBehaviour
 
         mesh.vertices = vertices;
         mesh.triangles = triangles;
-        fovHolder.GetComponent<PolygonCollider2D>().points = points;
+        fovPhysics.GetComponent<PolygonCollider2D>().points = points;
         
     }
     public static Vector3 VectorFromAngle(float angle)
