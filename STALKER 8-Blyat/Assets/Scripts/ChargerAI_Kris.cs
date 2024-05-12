@@ -11,13 +11,13 @@ public class ChargerAi : MonoBehaviour
     public Rigidbody2D rb;
     private static System.Random rng = new System.Random();
     private Vector3 movegen;
-    private bool seenWander;
     public Transform enemyPos;
     private bool wanderGened;
     public GameObject waypoint;
     private Vector2 movement;
     private float distance;
     public static bool seen;
+    public static bool seenWander;
     public Transform fovRotation;
     void FixedUpdate()
     {
@@ -29,13 +29,7 @@ public class ChargerAi : MonoBehaviour
             movement = transform.position - playerPos.position;
             movement = Vector2.ClampMagnitude(movement, 1);
             rb.MovePosition(rb.position - movespeed * Time.fixedDeltaTime * movement);
-            /*Vector2 target = (playerPos.position - transform.position).normalized;
-            Debug.DrawRay(enemyPos.position, target * distance);
-            dir = Vector2.Angle(fovRotation.transform., target) - 45;
-            Debug.Log(dir);
-            fovRotation.rotation = Quaternion.Euler(0,0,dir);*/
             fovRotation.right = playerPos.position - transform.position;
-
         }
         else
         {

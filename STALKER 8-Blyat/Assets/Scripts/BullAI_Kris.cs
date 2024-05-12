@@ -11,17 +11,17 @@ public class BullAi : MonoBehaviour
     public Rigidbody2D rb;
     private static System.Random rng = new System.Random();
     private Vector3 movegen;
-    private bool seen;
     private bool seenWander;
     public Transform enemyPos;
     private bool wanderGened;
     public GameObject waypoint;
     private Vector2 movement;
     private float distance;
+    public static bool seen;
+    public Transform fovRotation;
     void FixedUpdate()
     {
         distance = 20;
-        //seen = Detection.Detect(playerPos.position, enemyPos, distance); - Uncomment upon completion of FOV. Do so on ChargerAI too
         Debug.Log(seen);
         if(seen)
         {
@@ -31,6 +31,7 @@ public class BullAi : MonoBehaviour
             Vector3 direction = (playerPos.position - enemyPos.position).normalized;
             //rb.MovePosition(rb.position - movespeed * Time.fixedDeltaTime * movement);
             //Debug.Log($"{(playerPos.position - enemyPos.position).normalized}");
+            fovRotation.right = playerPos.position - transform.position;
             rb.AddForce(direction * movespeed);
         }
         else
@@ -43,7 +44,6 @@ public class BullAi : MonoBehaviour
                 wanderGened = true;
             }
             distance = 1.5F;
-            //seenWander = Detection.Detect(movegen, enemyPos, distance); - Uncomment upon completion of FOV. Do so on ChargerAI too
             if(Vector2.Distance(enemyPos.position, movegen) > 0.5 && seenWander)
             {
                 //Debug.Log(Vector2.Distance(enemyPos.position, movegen));
