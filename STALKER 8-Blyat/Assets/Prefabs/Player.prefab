@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 803866401061683155}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.14, y: 0, z: 0}
+  m_LocalPosition: {x: -1.14, y: -0.034, z: 0}
   m_LocalScale: {x: 0.3822, y: 0.3822, z: 0.3822}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -98,7 +98,8 @@ GameObject:
   - component: {fileID: 1158151498117116948}
   - component: {fileID: 5661843803016568374}
   - component: {fileID: 6906941603706575255}
-  - component: {fileID: 4711387911751474190}
+  - component: {fileID: 6001902255599275806}
+  - component: {fileID: 6865660279416085568}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -136,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1158151498117116948}
   moveSpeed: 5
-  animator: {fileID: 4711387911751474190}
+  animator: {fileID: 6001902255599275806}
 --- !u!114 &4185719879474772951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +218,7 @@ SpriteRenderer:
   m_SortingLayerID: 881117641
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be8b916ccfeb56a48a6ed5ce14c80313, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4af98463ff51f6d459f8ceb55de71589, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -257,13 +258,13 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.029459149, y: 0.02545023}
-  m_Size: {x: 0.83483464, y: 1.3810835}
+  m_Offset: {x: -0.012518764, y: -0.041345417}
+  m_Size: {x: 0.8920157, y: 1.6540991}
   m_Direction: 0
---- !u!95 &4711387911751474190
+--- !u!95 &6001902255599275806
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -284,6 +285,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6865660279416085568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703223859796256160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b5b32390cac5d4a81e0db8677b60e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
+  health_bar: {fileID: 0}
 --- !u!1 &7511881745895957090
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +312,7 @@ GameObject:
   - component: {fileID: 4001802013972310171}
   m_Layer: 3
   m_Name: Gun Anchor
-  m_TagString: Untagged
+  m_TagString: Gun Anchor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -333,4 +349,4 @@ MonoBehaviour:
   bulletTransform: {fileID: 8024913969463476796}
   canFire: 1
   Stats: {fileID: 11400000, guid: c6728340cab57e2409cd00ed5d738d07, type: 2}
-  TimeBetweenFiring: 0.7
+  loaded: 1
