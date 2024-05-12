@@ -35,7 +35,6 @@ public class ChargerAi : MonoBehaviour
             Debug.Log(dir);
             fovRotation.rotation = Quaternion.Euler(0,0,dir);*/
             fovRotation.right = playerPos.position - transform.position;
-            Debug.Log(fovRotation.right = playerPos.position - transform.position);
 
         }
         else
