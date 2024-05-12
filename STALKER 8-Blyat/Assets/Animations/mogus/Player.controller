@@ -9,10 +9,10 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: c6066059ba7e61c4eb1ece73877014a9, type: 2}
+    m_Motion: {fileID: 7400000, guid: 667d486279e33aa4faea37236400d6a8, type: 2}
     m_Threshold: -1
     m_Position: {x: 0, y: -1}
-    m_TimeScale: 100
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: horizontal
     m_Mirror: 0
@@ -20,7 +20,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: e038c16c01acabe4b816c81884940d9b, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 1}
-    m_TimeScale: 100
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: horizontal
     m_Mirror: 0
@@ -28,7 +28,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: f9d651456fc28474fb9418af85b31a23, type: 2}
     m_Threshold: 3
     m_Position: {x: -1, y: 0}
-    m_TimeScale: 100
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: horizontal
     m_Mirror: 0
@@ -36,7 +36,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 821d28ad225e2d94981848b196fe1c95, type: 2}
     m_Threshold: 5
     m_Position: {x: 1, y: 0}
-    m_TimeScale: 100
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: horizontal
     m_Mirror: 0
@@ -86,9 +86,9 @@ AnimatorStateMachine:
     m_Position: {x: 30, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7704569109859470220}
-    m_Position: {x: 30, y: 300, z: 0}
+    m_Position: {x: 30, y: 290, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 2362890619665494070}
+    m_State: {fileID: 4377730715290800603}
     m_Position: {x: 65, y: 365, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
@@ -173,7 +173,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 22316f99cf4067b41a49ec2e13363a26, type: 2}
+  m_Motion: {fileID: 7400000, guid: 44aa91239e0be7e409ed1570300014c3, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -219,14 +219,14 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &2362890619665494070
+--- !u!1102 &4377730715290800603
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Forward walk
+  m_Name: Gopnik Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -239,7 +239,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 667d486279e33aa4faea37236400d6a8, type: 2}
+  m_Motion: {fileID: 7400000, guid: 44aa91239e0be7e409ed1570300014c3, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
