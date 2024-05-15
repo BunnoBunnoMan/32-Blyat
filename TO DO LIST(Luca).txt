@@ -19,8 +19,14 @@ Things i will be working on,
    /This will most likely require studying and altering Kris' Code.
    /Stick to only the health being SO'd for now since each enemy already has individual scripts.
 
+
+- Last major game system : items and inventory + money drops
+
+
 -Think about making a dodge mechanic :D
  *I think it would be cool
+
+- distraction mechanic item
 
 -start making levels
  //greybox-->sprites-->animations
