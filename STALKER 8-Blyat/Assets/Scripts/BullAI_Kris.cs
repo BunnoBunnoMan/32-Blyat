@@ -67,8 +67,6 @@ public class BullAI : MonoBehaviour
                 //Destroy(wayObject);
                 wanderGened = false;
             }
-
-
         }
         seen = false;
     }
