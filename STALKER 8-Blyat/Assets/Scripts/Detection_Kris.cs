@@ -97,7 +97,15 @@ public class Detection : MonoBehaviour
     public void OnTriggerStay2D(Collider2D collision)
     {
         //Debug.Log(collision.gameObject.name);
-        if(collision.gameObject.name == "Player") ChargerAi.seen = true;
-        else if(collision.gameObject.name == "waypoint") ChargerAi.seenWander = true;
+        if(collision.gameObject.name == "Player")
+        {
+            ChargerAi.seen = true;
+            BullAI.seen = true;
+        }
+        else if(collision.gameObject.name == "waypoint")
+        {
+            ChargerAi.seenWander = true;
+            BullAI.seenWander = true;
+        }
     }
 }

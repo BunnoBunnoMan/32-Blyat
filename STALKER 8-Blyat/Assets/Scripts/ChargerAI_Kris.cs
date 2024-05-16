@@ -26,7 +26,6 @@ public class ChargerAi : MonoBehaviour
     }
     void FixedUpdate()
     {
-        distance = 20;
         if(seen)
         {
             wanderGened = false;

@@ -10,5 +10,6 @@ public class Waypoint : MonoBehaviour
     {
         Destroy(this.gameObject);
         ChargerAi.wanderGened = false;
+        BullAI.wanderGened = false;
     }
 }
