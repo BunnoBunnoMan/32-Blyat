@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7279919033008570102}
   - component: {fileID: 7738545061263957250}
   - component: {fileID: 5808045038812837339}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: border image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 8666756880756400706}
   - component: {fileID: 5785473300347380332}
   - component: {fileID: 1168426530418610059}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 2898442711532536898}
   - component: {fileID: 9135447535831038577}
   - component: {fileID: 3964484408482966182}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

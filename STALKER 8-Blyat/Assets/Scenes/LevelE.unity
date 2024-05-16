@@ -1684,6 +1684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bull
       objectReference: {fileID: 0}
+    - target: {fileID: 2990951378506855345, guid: 8f9cdb5153c51b349b7c794c2a7f5f85, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3515260658396213778, guid: 8f9cdb5153c51b349b7c794c2a7f5f85, type: 3}
       propertyPath: playerPos
       value: 

@@ -29,9 +29,9 @@ public class Bullet_script_561 : MonoBehaviour
     }
 
 
-    public void OnCollisionEnter2D(Collision2D collision){ 
-        Destroy(gameObject, 0.05f);
-        Debug.Log("collision detected");
+    public void OnTriggerEnter2D(Collider2D collision){ 
+        Destroy(gameObject);
+        //Debug.Log("collision detected");
         
     }
     
