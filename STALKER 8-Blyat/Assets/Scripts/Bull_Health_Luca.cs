@@ -22,7 +22,7 @@ public class Bull_Health_Luca : MonoBehaviour
   }
 
 
-  public void OnTriggerEnter2D(Collider2D collision){
+  public void OnTriggerEnter2D(Collider2D collision){ //remember that onCOLLISIONenter2D uses Collision and NOT Collider
    
    if (collision.gameObject.CompareTag("Bullet")){
     TakeDamage(5); //replace 5 with a bullet damage stat

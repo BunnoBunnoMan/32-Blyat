@@ -19,6 +19,6 @@ public class Enemy_health_bar_Luca : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offset);
+        slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offset); //tracks the enemy position
     }
 }

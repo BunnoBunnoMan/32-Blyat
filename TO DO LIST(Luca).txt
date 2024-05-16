@@ -11,13 +11,13 @@ Things i will be working on,
 - Add "magazine size" and a "reloading" system [Done]
 
  
--Create and implement a player Health/damage system [Done/waiting]
+-Create and implement a player Health/damage system [*Done]
  //Damage dealt by player should be a part of the GunStats SO.
+ *the damage values for each gun need to be implemented []
+ *the player needs to be able to take damage []
  
--Implement the health system for enemies [Waiting]
- //Each enemy type should have their own SO with all their stats.
-   /This will most likely require studying and altering Kris' Code.
-   /Stick to only the health being SO'd for now since each enemy already has individual scripts.
+-Implement the health system for enemies [*Done]
+ * Only the bull has all the components added, ADD THEM TO THE CHARGER []
 
 
 - Last major game system : items and inventory + money drops
