@@ -8,6 +8,7 @@ TagManager:
   - Gun Anchor
   - Bullet
   - Cover
+  - Enemies
   layers:
   - Default
   - TransparentFX

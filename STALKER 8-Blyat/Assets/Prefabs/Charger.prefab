@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 7332177593000771217}
   m_Layer: 2
   m_Name: Charger
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPos: {fileID: 0}
-  movespeed: 4.4
+  movespeed: 4.1
   rb: {fileID: 8849389745004241386}
   enemyPos: {fileID: 4423640242987850360}
   waypoint: {fileID: 2452839755669024599, guid: 0338ff47f5cfc4d42a3f0259644eede0, type: 3}
@@ -366,6 +366,10 @@ PrefabInstance:
     - target: {fileID: 8619042928138214842, guid: 35b3aca560bd3df4890cc8d00e5669d6, type: 3}
       propertyPath: m_Name
       value: Charger-Graphics
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619042928138214842, guid: 35b3aca560bd3df4890cc8d00e5669d6, type: 3}
+      propertyPath: m_TagString
+      value: Enemies
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2647240919942440733, guid: 35b3aca560bd3df4890cc8d00e5669d6, type: 3}

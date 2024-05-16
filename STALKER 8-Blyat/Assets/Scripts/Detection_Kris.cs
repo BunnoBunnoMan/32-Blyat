@@ -98,6 +98,6 @@ public class Detection : MonoBehaviour
     {
         //Debug.Log(collision.gameObject.name);
         if(collision.gameObject.name == "Player") ChargerAi.seen = true;
-        else if(collision.gameObject.name == "Test Wall") ChargerAi.seenWander = true;
+        else if(collision.gameObject.name == "waypoint") ChargerAi.seenWander = true;
     }
 }

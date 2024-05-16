@@ -12,20 +12,25 @@ public class ChargerAi : MonoBehaviour
     private static System.Random rng = new System.Random();
     private Vector3 movegen;
     public Transform enemyPos;
-    private bool wanderGened;
+    public static bool wanderGened;
     public GameObject waypoint;
     private Vector2 movement;
     private float distance;
     public static bool seen;
     public static bool seenWander;
     public Transform fovRotation;
+    private GameObject wayObject;
+    void Start()
+    {
+        wanderGened = false;
+    }
     void FixedUpdate()
     {
-        
         distance = 20;
         if(seen)
         {
             wanderGened = false;
+            Destroy(wayObject);
             movement = transform.position - playerPos.position;
             movement = Vector2.ClampMagnitude(movement, 1);
             rb.MovePosition(rb.position - movespeed * Time.fixedDeltaTime * movement);
@@ -33,30 +38,33 @@ public class ChargerAi : MonoBehaviour
         }
         else
         {
-            /*if(wanderGened == false || !seenWander)
+            if(!wanderGened || !wayObject.activeInHierarchy)
             {
                 movegen = WanderGen();
-                //Debug.Log($"{movegen.x}.{movegen.y}");
-                Instantiate(waypoint, movegen, Quaternion.identity);
+                wayObject = Instantiate(waypoint, movegen, Quaternion.identity);
                 wanderGened = true;
-            }*/
-            distance = 0.25F;
-            //seenWander = Detection.Detect(movegen, enemyPos, distance); Uncomment upon completion of FOV. Do so on BullAI too
-            if(Vector2.Distance(enemyPos.position, movegen) > 0.5 && seenWander)
-            {
-                //Debug.Log(Vector2.Distance(enemyPos.position, movegen));
-                movement = enemyPos.position - movegen;
-                movement = Vector2.ClampMagnitude(movement, 1);
-                rb.MovePosition(rb.position - 1 * movement * Time.fixedDeltaTime);
             }
-            else if(Vector2.Distance(enemyPos.position, movegen) < 0.5) wanderGened = false;
+            else if(wayObject.activeInHierarchy)
+            {
+                movement = enemyPos.position - wayObject.transform.position;
+                movement = Vector2.ClampMagnitude(movement,1);
+                rb.MovePosition(rb.position - 1 * Time.fixedDeltaTime * movement);
+                fovRotation.right = wayObject.transform.position - transform.position;
+            }
+            if(Vector2.Distance(enemyPos.position, wayObject.transform.position) < 0.5)
+            {
+                //Destroy(wayObject);
+                wanderGened = false;
+            }
+
+
         }
         seen = false;
     }
     private Vector3 WanderGen()
     {
-        int xMax = rng.Next(-1, 1);
-        int yMax = rng.Next(-1, 1);
+        int xMax = rng.Next(-2, 2);
+        int yMax = rng.Next(-2, 2);
         movegen.x = transform.position.x + xMax;
         movegen.y = transform.position.y + yMax;
         return movegen;
