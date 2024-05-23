@@ -13,5 +13,6 @@ public class DefaultGun : MonoBehaviour
         Stats.MagazineSize = 2f;
         Stats.ReloadSpeed = 3f;
         Stats.ShotsFired = 0f;
+        Stats.GunDamage = 8;
     }
 }

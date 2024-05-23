@@ -13,5 +13,6 @@ public class FastestGun : MonoBehaviour
         Stats.MagazineSize = 30f;
         Stats.ReloadSpeed = 1.5f;
         Stats.ShotsFired = 0f;
+        Stats.GunDamage = 2;
     }
 }
