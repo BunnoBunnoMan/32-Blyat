@@ -8,8 +8,6 @@ public class Waypoint : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(this.gameObject);
-        ChargerAi.wanderGened = false;
-        BullAI.wanderGened = false;
+        if(collision.gameObject.name != "waypoint") Destroy(this.gameObject);
     }
 }

@@ -20,6 +20,7 @@ public class Detection : MonoBehaviour
     public LayerMask layerMask;
     private Mesh mesh;
     public GameObject fovPhysics;
+    public MonoBehaviour bullAI;
     //public static float rayAngle;
     //public static float rayAngle;
     /*public static bool Detect(Vector3 playerPos, Transform enemyPos, float distance)
@@ -38,7 +39,6 @@ public class Detection : MonoBehaviour
     }*/
     void Start()
     {
-        
         mesh = new Mesh();
         fovPhysics.GetComponent<MeshFilter>().mesh = mesh;
         
@@ -99,13 +99,14 @@ public class Detection : MonoBehaviour
         //Debug.Log(collision.gameObject.name);
         if(collision.gameObject.name == "Player")
         {
-            ChargerAi.seen = true;
-            BullAI.seen = true;
+            //ChargerAi.seen = true;
+            SendMessage("SeenDetection", true);
         }
         else if(collision.gameObject.name == "waypoint")
         {
-            ChargerAi.seenWander = true;
-            BullAI.seenWander = true;
+            //ChargerAi.seenWander = true;
+            SendMessage("SeenDetection", false);
+            Debug.Log("Running detect");
         }
     }
 }

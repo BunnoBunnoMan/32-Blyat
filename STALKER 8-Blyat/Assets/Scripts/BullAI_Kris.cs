@@ -16,8 +16,8 @@ public class BullAI : MonoBehaviour
     public GameObject waypoint;
     private Vector2 movement;
     private float distance;
-    public static bool seen;
-    public static bool seenWander;
+    private bool seen;
+    private bool seenWander;
     public Transform fovRotation;
     private GameObject wayObject;
     private float time;
@@ -42,29 +42,29 @@ public class BullAI : MonoBehaviour
                 rb.AddForce(movement, ForceMode2D.Impulse);
                 time = 0;
             }
-            if(Vector2.Distance(enemyPos.position, playerPos.position) > 6)
+            if(Vector2.Distance(enemyPos.position, playerPos.position) > 6.5)
             {
                 rb.velocity = Vector2.zero;
             }
         }
         else
         {
-            if(!wanderGened || !wayObject.activeInHierarchy)
+            if(!wanderGened)
             {
                 movegen = WanderGen();
                 wayObject = Instantiate(waypoint, movegen, Quaternion.identity);
                 wanderGened = true;
             }
-            else if(wayObject.activeInHierarchy)
+            if(wanderGened)
             {
-                movement = enemyPos.position - wayObject.transform.position;
+                movement = enemyPos.position - movegen;
                 movement = Vector2.ClampMagnitude(movement,1);
                 rb.MovePosition(rb.position - 1 * Time.fixedDeltaTime * movement);
-                fovRotation.right = wayObject.transform.position - transform.position;
+                fovRotation.right = movegen - transform.position;
+                Debug.Log(Vector2.Distance(enemyPos.position, movegen));
             }
-            if(Vector2.Distance(enemyPos.position, wayObject.transform.position) < 0.5)
+            if(Vector2.Distance(enemyPos.position, movegen) < 0.5)
             {
-                //Destroy(wayObject);
                 wanderGened = false;
             }
         }
@@ -77,5 +77,15 @@ public class BullAI : MonoBehaviour
         movegen.x = transform.position.x + xMax;
         movegen.y = transform.position.y + yMax;
         return movegen;
+    }
+    public void SeenDetection(bool ToF)
+    {
+        if(ToF) seen = true;
+        else seenWander = true;
+        Debug.Log("Running");
+    }
+    public void WanderDetection()
+    {
+        wanderGened = false;
     }
 }
