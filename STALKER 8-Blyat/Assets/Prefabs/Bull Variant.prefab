@@ -456,6 +456,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4991371054447785116, guid: 08cf172ab276df2499861c161227c5fb, type: 3}
+      propertyPath: m_TagString
+      value: Bull
+      objectReference: {fileID: 0}
     - target: {fileID: 7332177593000771217, guid: 08cf172ab276df2499861c161227c5fb, type: 3}
       propertyPath: viewDistance
       value: 7.5
@@ -516,9 +520,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2111f131c57f2d4893fb6e7f61bd118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
+  maxHealth: 16
   currentHealth: 0
   health_bar: {fileID: 8301134173341392051}
+  gunStats: {fileID: 11400000, guid: c6728340cab57e2409cd00ed5d738d07, type: 2}
 --- !u!50 &3332455609987446214 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 8849389745004241386, guid: 08cf172ab276df2499861c161227c5fb, type: 3}

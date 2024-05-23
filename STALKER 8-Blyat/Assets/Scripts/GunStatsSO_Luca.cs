@@ -9,4 +9,5 @@ public class GunStats : ScriptableObject
     public float MagazineSize;
     public float ShotsFired;
     public float ReloadSpeed;
+    public int GunDamage;
 }

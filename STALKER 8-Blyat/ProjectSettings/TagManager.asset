@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Cover
   - Enemies
+  - Bull
   layers:
   - Default
   - TransparentFX

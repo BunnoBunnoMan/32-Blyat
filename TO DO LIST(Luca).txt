@@ -6,27 +6,37 @@ Things i will be working on,
 
 -Create a test environment for "swapping" weapons [DONE] 18/04/24
 
-- Learn about/implemented a system for adding and changing animations [DONE!!!] 25/04/24
+- Learn about/implemented a system for adding and changing animations [DONE] 25/04/24
 
-- Add "magazine size" and a "reloading" system [Done]
+- Add "magazine size" and a "reloading" system [Done] 02/05/24
 
  
--Create and implement a player Health/damage system [*Done]
- //Damage dealt by player should be a part of the GunStats SO.
- *the damage values for each gun need to be implemented []
- *the player needs to be able to take damage []
+-Create and implement a player Health/damage system [Done] 
+ //Damage dealt by player is a part of the GunStats SO.
  
 -Implement the health system for enemies [*Done]
  * Only the bull has all the components added, ADD THEM TO THE CHARGER []
 
 
-- Last major game system : items and inventory + money drops
+-items and inventory  []
+// items that can be picked up and used with a certain key press
+// dropping items should also be an option
+
+   /distraction mechanic item
+   /grenade
+   /matchbox
+
+-money drops []
+// Instantiate a "money" item on enemy death
+// Increase a money counter and despawn item instance when picked up by player
+
+- Add tutorial text to the build we send in
+//So that Fredrik can test all the features
 
 
 -Think about making a dodge mechanic :D
  *I think it would be cool
 
-- distraction mechanic item
 
 -start making levels
  //greybox-->sprites-->animations
