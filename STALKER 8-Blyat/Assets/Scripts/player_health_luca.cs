@@ -24,8 +24,8 @@ public class Player_health_luca : MonoBehaviour
 
   public void OnCollisionEnter2D(Collision2D collision){ //remember that onCOLLISIONenter2D uses Collision and NOT Collider
    
-   if (collision.gameObject.CompareTag("Bull")){
-      TakeDamage(2); //replace 5 with a bullet damage stat
+   if (collision.gameObject.name == "Bull Variant"){
+      TakeDamage(4); //
       Debug.Log("You took damage");
     }
 
