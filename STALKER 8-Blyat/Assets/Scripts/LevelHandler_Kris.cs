@@ -13,6 +13,6 @@ public class LevelHandler : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.name == "Player" && thisObject.name != "Button") menuHandler.ToTitle(sceneName);
-        else if (thisObject.name == "Button") Instantiate(enemy, eSpawnPos, Quaternion.identity);
+        else if (collision.gameObject.name == "Player" &&thisObject.name == "Button") Instantiate(enemy, eSpawnPos, Quaternion.identity);
     }
 }
