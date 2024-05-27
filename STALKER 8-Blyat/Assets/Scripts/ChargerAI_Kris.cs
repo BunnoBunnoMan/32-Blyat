@@ -23,6 +23,7 @@ public class ChargerAi : MonoBehaviour
     void Start()
     {
         wanderGened = false;
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
     }
     void FixedUpdate()
     {
@@ -37,7 +38,7 @@ public class ChargerAi : MonoBehaviour
         }
         else
         {
-            if(!wanderGened || !wayObject.activeInHierarchy)
+            if(!wanderGened || wayObject == null)
             {
                 movegen = WanderGen();
                 wayObject = Instantiate(waypoint, movegen, Quaternion.identity);
@@ -67,5 +68,15 @@ public class ChargerAi : MonoBehaviour
         movegen.x = transform.position.x + xMax;
         movegen.y = transform.position.y + yMax;
         return movegen;
+    }
+    public void SeenDetection(bool ToF)
+    {
+        if(ToF) seen = true;
+        else seenWander = true;
+        Debug.Log("Running");
+    }
+    public void WanderDetection()
+    {
+        wanderGened = false;
     }
 }

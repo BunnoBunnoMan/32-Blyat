@@ -23,7 +23,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4423640242987850360
 Transform:
   m_ObjectHideFlags: 0
@@ -288,6 +288,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   fovPhysics: {fileID: 4991371054447785116}
+  bullAI: {fileID: 0}
 --- !u!1001 &7147936015064477888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -561,11 +562,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8666756880756400706, guid: 843dd50e35c4bde44bc4369ef370349f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8666756880756400706, guid: 843dd50e35c4bde44bc4369ef370349f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

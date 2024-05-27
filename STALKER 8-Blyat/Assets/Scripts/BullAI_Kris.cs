@@ -24,6 +24,7 @@ public class BullAI : MonoBehaviour
     void Start()
     {
         wanderGened = false;
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
     }
     void FixedUpdate()
     {

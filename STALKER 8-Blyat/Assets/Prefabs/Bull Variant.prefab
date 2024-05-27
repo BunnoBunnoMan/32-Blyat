@@ -186,7 +186,7 @@ RectTransform:
   m_Father: {fileID: 8121078763489555914}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -414,7 +414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4423640242987850360, guid: 08cf172ab276df2499861c161227c5fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.04
       objectReference: {fileID: 0}
     - target: {fileID: 4423640242987850360, guid: 08cf172ab276df2499861c161227c5fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -460,6 +460,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Bull
       objectReference: {fileID: 0}
+    - target: {fileID: 7332177593000771217, guid: 08cf172ab276df2499861c161227c5fb, type: 3}
+      propertyPath: bullAI
+      value: 
+      objectReference: {fileID: 3515260658396213778}
     - target: {fileID: 7332177593000771217, guid: 08cf172ab276df2499861c161227c5fb, type: 3}
       propertyPath: viewDistance
       value: 7.5
