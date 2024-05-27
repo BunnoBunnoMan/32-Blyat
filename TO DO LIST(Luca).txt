@@ -16,13 +16,14 @@ Things i will be working on,
  
 -Implement the health system for enemies [*Done]
  * Only the bull has all the components added, ADD THEM TO THE CHARGER []
-
+ * MAKE SURE THE HEALTH SYSTEM PROPERLY WORKS IN THE TEST BUILD
 
 -items and inventory  []
+// each "class" should have their own set of items
 // items that can be picked up and used with a certain key press
 // dropping items should also be an option
 
-   /distraction mechanic item
+   /distraction mechanic item (steak or sumn)
    /grenade
    /matchbox
 
