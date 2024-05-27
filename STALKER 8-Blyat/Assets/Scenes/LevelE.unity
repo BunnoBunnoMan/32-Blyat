@@ -2428,7 +2428,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 940681586604857588, guid: 017d69b567f8648458288ef8c69ddbe0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3146798271509718301, guid: 017d69b567f8648458288ef8c69ddbe0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2473,6 +2473,10 @@ PrefabInstance:
     - target: {fileID: 5888135598903034040, guid: 017d69b567f8648458288ef8c69ddbe0, type: 3}
       propertyPath: m_Name
       value: Bull
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888135598903034040, guid: 017d69b567f8648458288ef8c69ddbe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7356320807806328310, guid: 017d69b567f8648458288ef8c69ddbe0, type: 3}
       propertyPath: playerPos
