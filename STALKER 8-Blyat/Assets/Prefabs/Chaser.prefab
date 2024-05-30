@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 7332177593000771217}
   - component: {fileID: 8371366612805110995}
   m_Layer: 2
-  m_Name: Charger
+  m_Name: Chaser
   m_TagString: Chaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
