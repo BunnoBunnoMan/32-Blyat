@@ -439,6 +439,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: LevelE
       objectReference: {fileID: 0}
+    - target: {fileID: 5387543859761866803, guid: 4eed6758e7530ac438f0ee81119ae535, type: 3}
+      propertyPath: thisObject
+      value: 
+      objectReference: {fileID: 1031793973}
     - target: {fileID: 7103562954990012666, guid: 4eed6758e7530ac438f0ee81119ae535, type: 3}
       propertyPath: m_Name
       value: Teleporter
@@ -578,6 +582,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1031793973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7103562954990012666, guid: 4eed6758e7530ac438f0ee81119ae535, type: 3}
+  m_PrefabInstance: {fileID: 583868206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1055472893
 GameObject:
   m_ObjectHideFlags: 0
