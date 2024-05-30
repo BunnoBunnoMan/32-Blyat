@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class PlayerSaver_Kris
+public class PlayerSaver_Namo
 {
     public float[] position;
 
-    public PlayerSaver_Kris(PlayerInfo_Kris player)
+    public PlayerSaver_Namo(PlayerInfo_Namo player)
     {
         position = new float[3];
         position[0] = player.transform.position.x;
