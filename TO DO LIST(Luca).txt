@@ -2,6 +2,7 @@ Things i will be working on,
 
 -finish the bullet script[DONE] 11/04/24
  //followed a youtube guide but over time it made more sense how it worked.
+ //calculates and angle by taking the vector of the mouse and parent game object at instantiation. 
 
 -create a scriptable object for weapon stats [DONE] 18/04/24
  //done and done.
@@ -20,13 +21,11 @@ Things i will be working on,
  //Damage dealt by player is a part of the GunStats SO.
  //Handling the UI integration is definetly somehthing new.
  
--Implement the health system for enemies [*Done]
+-Implement the health system for enemies [Done] 30/05/24
  //A smaller health bar follows each enemy around.
  // enemies despawn upon reaching 0 HP.
- * Only the bull has all the components added, ADD THEM TO THE CHARGER []
- * MAKE SURE THE HEALTH SYSTEM PROPERLY WORKS IN THE TEST BUILD
 
-- Add tutorial text to the build we send in []
+- Add tutorial text to the build we send in [DONE] 30/05/24
 //So that Fredrik can test all the features
 
 -items and inventory  []
