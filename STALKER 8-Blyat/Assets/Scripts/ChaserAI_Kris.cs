@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 using System.Threading.Tasks;
 
-public class ChargerAi : MonoBehaviour
+public class ChaserAi : MonoBehaviour
 {
     public Transform playerPos;
     public float movespeed;
