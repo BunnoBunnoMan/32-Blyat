@@ -15,10 +15,11 @@ public class Aiming : MonoBehaviour
     public GunStats Stats;
     public bool loaded;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {   
-
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 

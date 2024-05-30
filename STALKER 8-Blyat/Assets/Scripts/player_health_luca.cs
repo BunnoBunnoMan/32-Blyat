@@ -22,7 +22,7 @@ public class Player_health_luca : MonoBehaviour
     health_bar.SetHealth(currentHealth);
   }
 
-  public void OnTriggerEnter2D(Collider2D collision){ //remember that onCOLLISIONenter2D uses Collision and NOT Collider
+  public void OnCollisionEnter2D(Collision2D collision){ //remember that onCOLLISIONenter2D uses Collision and NOT Collider
    
    if (collision.gameObject.CompareTag("Bull")){
       TakeDamage(4); //
