@@ -24,12 +24,12 @@ public class Player_health_luca : MonoBehaviour
 
   public void OnTriggerEnter2D(Collider2D collision){ //remember that onCOLLISIONenter2D uses Collision and NOT Collider
    
-   if (collision.gameObject.name == "Bull"){
+   if (collision.gameObject.CompareTag("Bull")){
       TakeDamage(4); //
       //Debug.Log("You took damage");
     }
 
-    if (collision.gameObject.name == "Charger"){
+    if (collision.gameObject.CompareTag("Chaser")){
       TakeDamage(2);
     }
 
