@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Charger_Health_Luca : MonoBehaviour
+public class Chaser_Health_Luca : MonoBehaviour
 {
   public int maxHealth;
   public int currentHealth;
