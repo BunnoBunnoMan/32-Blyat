@@ -610,7 +610,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: To the right we have two buttons that you walk into to activate. One spawns
-    "Chargers", the other spawns "Bulls".
+    "Chasers", the other spawns "Bulls".
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -800,7 +800,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Charger
+  m_text: 'Chaser
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1970,7 +1972,7 @@ GameObject:
   - component: {fileID: 1283825422}
   - component: {fileID: 1283825421}
   m_Layer: 0
-  m_Name: Charger Tutorial
+  m_Name: Chaser Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1996,8 +1998,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The "Charger" is an enemy that, once it detects the player, will chase
-    it at nearly the player's movement speed.
+  m_text: The "Chaser" is an enemy that, once it detects the player, will chase it
+    at nearly the player's movement speed.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2195,7 +2197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4991371054447785116, guid: 08cf172ab276df2499861c161227c5fb, type: 3}
       propertyPath: m_Name
-      value: Charger
+      value: Chaser
       objectReference: {fileID: 0}
     - target: {fileID: 4991371054447785116, guid: 08cf172ab276df2499861c161227c5fb, type: 3}
       propertyPath: m_IsActive
@@ -2351,7 +2353,7 @@ GameObject:
   - component: {fileID: 1483925843}
   - component: {fileID: 1483925842}
   m_Layer: 0
-  m_Name: Charger Button
+  m_Name: Chaser Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2464,7 +2466,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'On the other hand the "Bull" will: look at you, charge up and then charge
+    you down.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
