@@ -10,6 +10,7 @@ TagManager:
   - Cover
   - Enemies
   - Bull
+  - Chaser
   layers:
   - Default
   - TransparentFX
