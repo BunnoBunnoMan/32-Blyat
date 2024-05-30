@@ -62,7 +62,6 @@ public class BullAI : MonoBehaviour
                 movement = Vector2.ClampMagnitude(movement,1);
                 rb.MovePosition(rb.position - 1 * Time.fixedDeltaTime * movement);
                 fovRotation.right = movegen - transform.position;
-                Debug.Log(Vector2.Distance(enemyPos.position, movegen));
             }
             if(Vector2.Distance(enemyPos.position, movegen) < 0.5)
             {
@@ -83,7 +82,6 @@ public class BullAI : MonoBehaviour
     {
         if(ToF) seen = true;
         else seenWander = true;
-        Debug.Log("Running");
     }
     public void WanderDetection()
     {

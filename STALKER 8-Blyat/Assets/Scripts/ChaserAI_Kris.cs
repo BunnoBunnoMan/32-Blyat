@@ -56,8 +56,6 @@ public class ChaserAi : MonoBehaviour
                 //Destroy(wayObject);
                 wanderGened = false;
             }
-
-
         }
         seen = false;
     }
@@ -73,7 +71,6 @@ public class ChaserAi : MonoBehaviour
     {
         if(ToF) seen = true;
         else seenWander = true;
-        Debug.Log("Running");
     }
     public void WanderDetection()
     {

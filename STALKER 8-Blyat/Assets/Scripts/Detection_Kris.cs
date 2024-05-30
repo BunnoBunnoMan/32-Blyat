@@ -35,7 +35,7 @@ public class Detection : MonoBehaviour
         Debug.Log(Array.IndexOf(hitList, "Cover"));
         if (!(hitList[1] == "Cover")) return true;
         else return false;
-    }*/
+    } ^Defunkt */
     void Start()
     {
         mesh = new Mesh();
@@ -43,7 +43,6 @@ public class Detection : MonoBehaviour
     void Update()
     {
         float rayAngle = fovRotation.eulerAngles.z +45;
-        //Debug.Log(rayAngle);
         float angleIncrease = fov / levelOfDetail;
         Vector3[] vertices = new Vector3[levelOfDetail + 2];
         Vector2[] points = new Vector2[vertices.Length];
@@ -65,7 +64,6 @@ public class Detection : MonoBehaviour
             {
                 Vector3 point = hit.point;
                 vertex = point - position.position;
-                //Debug.Log(vertex);
             }
             vertices[vertexIndex] = vertex;
             points[vertexIndex] = vertex;
@@ -93,7 +91,6 @@ public class Detection : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        //Debug.Log(collision.gameObject.name);
         if(collision.gameObject.name == "Player")
         {
             //ChargerAi.seen = true;
