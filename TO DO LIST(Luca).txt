@@ -1,22 +1,33 @@
 Things i will be working on,
 
 -finish the bullet script[DONE] 11/04/24
+ //followed a youtube guide but over time it made more sense how it worked.
 
 -create a scriptable object for weapon stats [DONE] 18/04/24
+ //done and done.
 
 -Create a test environment for "swapping" weapons [DONE] 18/04/24
+ //hitboxes that trigger a change in the active weapon stats.
 
 - Learn about/implemented a system for adding and changing animations [DONE] 25/04/24
+ //using the unity animator tool and timeline.
 
 - Add "magazine size" and a "reloading" system [Done] 02/05/24
+ //using a scriptable object to track the active stats for the gun.
 
  
--Create and implement a player Health/damage system [Done] 
+-Create and implement a player Health/damage system [Done] 16/05/24
  //Damage dealt by player is a part of the GunStats SO.
+ //Handling the UI integration is definetly somehthing new.
  
 -Implement the health system for enemies [*Done]
+ //A smaller health bar follows each enemy around.
+ // enemies despawn upon reaching 0 HP.
  * Only the bull has all the components added, ADD THEM TO THE CHARGER []
  * MAKE SURE THE HEALTH SYSTEM PROPERLY WORKS IN THE TEST BUILD
+
+- Add tutorial text to the build we send in []
+//So that Fredrik can test all the features
 
 -items and inventory  []
 // each "class" should have their own set of items
@@ -30,9 +41,6 @@ Things i will be working on,
 -money drops []
 // Instantiate a "money" item on enemy death
 // Increase a money counter and despawn item instance when picked up by player
-
-- Add tutorial text to the build we send in
-//So that Fredrik can test all the features
 
 
 -Think about making a dodge mechanic :D
