@@ -10,7 +10,6 @@ TagManager:
   - Cover
   - Enemies
   - Bull
-  - Charger
   layers:
   - Default
   - TransparentFX
