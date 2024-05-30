@@ -20,6 +20,7 @@ public class Aiming : MonoBehaviour
     {   
 
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+      
     }
 
     // Update is called once per frame
