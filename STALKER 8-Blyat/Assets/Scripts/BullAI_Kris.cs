@@ -50,20 +50,20 @@ public class BullAI : MonoBehaviour
         }
         else
         {
-            if(!wanderGened)
+            if(!wanderGened || wayObject == null)
             {
                 movegen = WanderGen();
                 wayObject = Instantiate(waypoint, movegen, Quaternion.identity);
                 wanderGened = true;
             }
-            if(wanderGened)
+            else if(wayObject.activeInHierarchy)
             {
-                movement = enemyPos.position - movegen;
+                movement = enemyPos.position - wayObject.transform.position;
                 movement = Vector2.ClampMagnitude(movement,1);
                 rb.MovePosition(rb.position - 1 * Time.fixedDeltaTime * movement);
-                fovRotation.right = movegen - transform.position;
+                fovRotation.right = wayObject.transform.position - transform.position;
             }
-            if(Vector2.Distance(enemyPos.position, movegen) < 0.5)
+            if(Vector2.Distance(enemyPos.position, wayObject.transform.position) < 0.5)
             {
                 wanderGened = false;
             }
